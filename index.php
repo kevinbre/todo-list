@@ -9,7 +9,7 @@ require 'db_conn.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do List</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/all.css">
 </head>
 <body>
 <h1 class="title">TO DO LIST</h1>
@@ -21,12 +21,12 @@ require 'db_conn.php';
                         name="title"
                         style="border-color: #ff6666"
                         placeholder="Task is required"/>
-                        <button type="submit">Add &nbsp; <span>&#43;</span></button>
+                        <button type="submit">Add <i class="fas fa-check"></i></button>
             <?php }else{ ?>
                 <input type="text" 
                         name="title" 
                         placeholder="Add task"/>
-                        <button type="submit">Add &nbsp; <span>&#43;</span></button>
+                        <button type="submit">Add <i class="fas fa-check"></i></button>
             <?php } ?>
             </form>
         </div>
@@ -36,15 +36,14 @@ require 'db_conn.php';
         <div class="show-todo-section">
             <?php if($todos->rowCount() <= 0){ ?>
             <div class="todo-item">
-                <div class="empty">
-                    <!-- <img src="img/f.png" width="100%"/> -->
+                <div class="empty">                    
                     <img src="img/load.gif" width="80px"/>
                 </div>         
             </div>
             <?php } ?>
             <?php while($todo = $todos->fetch(PDO::FETCH_ASSOC)) { ?>
             <div class="todo-item">
-                <span id="<?php echo $todo['id']; ?>" class="remove-to-do"><i class="fas fa-trash-alt"> </i></span>
+                <span id="<?php echo $todo['id']; ?>" class="remove-to-do"> <i class="fas fa-trash-alt"></i>  </span>
                 <?php if($todo['checked']){ ?>
                     <input type="checkbox" data-todo-id="<?php echo $todo['id']; ?>" class="check-box" checked />
                     <h2 class="checked"><?php echo $todo['title'] ?></h2>
@@ -79,6 +78,7 @@ $(document).ready(function(){
                 }
             }
        )
+       
    });
    $(".check-box").click(function(e){
         const id = $(this).attr('data-todo-id');
@@ -99,6 +99,7 @@ $(document).ready(function(){
             }
         
         );
+        e.preventDefault();
    });
 });
 </script>
