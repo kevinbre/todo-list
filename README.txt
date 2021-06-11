@@ -19,14 +19,25 @@ https://www.apachefriends.org/download.html
 
 @echo off
 echo Installing DataBases..
+
 cd c:/
+
 cd C:/Xampp/mysql/bin
-mysql -u root -p
+
+mysql -u root 
+
 create database to_do_list;
-exit
-mysql -u root -p to_do_list < C:/Xampp/htdocs/todolist/db/to_do_list.sql
-echo "Database created successfully!"
-exit
+
+mysql -u root to_do_list < C:/Xampp/htdocs/todolist/db/to_do_list.sql
+
+echo Database created successfully
+
+echo You can close the windows
+
+echo Enter for Exit
+
+echo stop
+
 
 
 6- Open the application from this link
