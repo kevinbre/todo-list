@@ -31,4 +31,4 @@ exit
 
 6- Open the application from this link
 
-http://localhost/todolist/index.php
+http://localhost/todo-list/index.php
