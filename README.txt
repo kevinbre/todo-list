@@ -30,7 +30,7 @@ create database to_do_list;
 
 exit
 
-mysql -u root -p to_do_list < C:/Xampp/htdocs/todolist/db/to_do_list.sql
+mysql -u root -p to_do_list < C:/Xampp/htdocs/todo-list/db/to_do_list.sql
 
 echo "Database created successfully!"
 exit
