@@ -29,4 +29,4 @@ exit
 
 5- Open the application from this link
 
-https://localhost/todolist
+http://localhost/todolist/index.php
