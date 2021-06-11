@@ -11,9 +11,11 @@ https://www.apachefriends.org/download.html
 
 2- Execute XAMPP and start Apache & MySQL
 
-3- Paste the todo-list folder in C:/Xampp/htdocs
+3- Download proyect and rename the folder to todo-list 
 
-4- Open CMD and paste this commands
+4- Paste todo-list folder in C:/Xampp/htdocs
+
+5- Open CMD and paste this commands
 
 @echo off
 echo Installing DataBases..
@@ -27,6 +29,6 @@ echo "Database created successfully!"
 exit
 
 
-5- Open the application from this link
+6- Open the application from this link
 
 http://localhost/todolist/index.php
