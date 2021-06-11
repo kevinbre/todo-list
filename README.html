@@ -1,0 +1,33 @@
+<div style="text-align:center">
+1- Download and Install XAMPP<br>
+<a href="https://www.apachefriends.org/xampp-files/8.0.7/xampp-windows-x64-8.0.7-0-VS16-installer.exe"> Xampp Windows 64bits</a><br>
+<br>
+<a href="https://www.apachefriends.org/xampp-files/8.0.7/xampp-linux-x64-8.0.7-0-installer.run"> Xampp Linux 64bits</a>
+<br>
+<br>
+<a href="https://www.apachefriends.org/download.html">Other Options</a><br>
+<br>
+2- Execute XAMPP and start Apache & MySQL<br>
+<br>
+3- Paste the todo-list folder in C:/Xampp/htdocs<br>
+<br>
+4- Open CMD and paste this commands<br><br>
+
+@echo off<br>
+echo Installing DataBases..<br>
+cd c:/<br>
+cd C:/Xampp/mysql/bin<br>
+mysql -u root -p<br>
+create database to_do12_list;<br>
+exit<br>
+mysql -u root -p to_do12_list < C:/Xampp/htdocs/todolist/db/to_do_list.sql<br>
+echo "Database created successfully!"<br>
+exit<br><br>
+
+
+5- Open the application from this link<br>
+
+<a href="http://localhost/todolist/">Run To do List</a>
+</div>
+
+
